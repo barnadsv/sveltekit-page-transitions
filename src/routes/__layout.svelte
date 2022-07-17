@@ -15,7 +15,7 @@
   import UAParser  from 'ua-parser-js'
   import { App } from "konsta/svelte";
   import Button from "$lib/components/Button.svelte";
-  import { Page, Navbar, Toolbar, Link } from 'konsta/svelte'
+  import { Page, Navbar, Toolbar, Link, Panel } from 'konsta/svelte'
   import { onMount } from "svelte";
 
   export let pathname;
@@ -23,6 +23,12 @@
   let htmlElement = null
   let osTheme = null
   let title
+  let leftPanelOpened = false 
+  
+  // TODO
+  // Transformar Navbar em um componente para ser o header e concentrar o codigo
+  // Transformar Toolbar em um componente para ser o footer e concentrar o codigo
+  // Transformar Panel em um componente para ser o menu e concentrar o codigo
 
   // Detectando o dispositivo para determinar o tema (ios|material)
   const parser = new UAParser()
@@ -94,6 +100,15 @@
           <Link toolbar><a href="/about">About</a></Link>
           <Link toolbar onClick={toggleDark}>Toggle</Link>
         </Toolbar>
+        <Panel
+          side="left"
+          opened={leftPanelOpened}
+          onBackdropClick={() => (leftPanelOpened = false)}
+        >
+          <Page>
+            <p>Left Panel</p>
+          </Page>
+        </Panel>
       </Page>
   </App>
   {:else}
@@ -108,6 +123,15 @@
           <Link toolbar><a href="/about">About</a></Link>
           <Link toolbar onClick={toggleDark}>Toggle</Link>
         </Toolbar>
+        <Panel
+          side="left"
+          opened={leftPanelOpened}
+          onBackdropClick={() => (leftPanelOpened = false)}
+        >
+          <Page>
+            <p>Left Panel</p>
+          </Page>
+        </Panel>
       </Page>
   </App>
   {/if}
