@@ -1,3 +1,11 @@
+<script>
+  import { Block } from 'konsta/svelte'
+  import { navbarStore } from "$lib/stores/navbar"
+
+  $navbarStore = 'About'
+</script>
+
+<Block>
 <h1>About</h1>
 <p>
   Occaecat eu nostrud aliqua cillum mollit est ipsum do elit sunt consectetur
@@ -8,3 +16,14 @@
   id incididunt commodo elit consectetur ut cupidatat enim nulla nisi incididunt
   commodo anim. Sit ea sint incididunt dolor ut nisi consectetur officia ea.
 </p>
+</Block>
+
+<style lang="postcss">
+  body p {
+    color: black;
+  }
+
+  body.dark-mode p {
+    color: white;
+  }
+</style>
