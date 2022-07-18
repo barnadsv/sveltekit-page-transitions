@@ -1,5 +1,5 @@
 <script>
-  import { Block } from 'konsta/svelte'
+  import { Block, BlockTitle, List, ListItem, Button } from 'konsta/svelte'
   import { navbarStore } from "$lib/stores/navbar"
 
   $navbarStore = 'Home'
@@ -11,5 +11,13 @@
     Navigate between pages using the links above, and an animated page transition
     will occur.
   </p>    
+  <button class="btn btn-outline btn-xs sm:btn-sm md:btn-md lg:btn-lg">Button</button>
+  <BlockTitle>Simple List</BlockTitle>
+  <List>
+    <ListItem title="Item 1" />
+    <ListItem title="Item 2" />
+    <ListItem title="Item 3" />
+  </List>
+  <Button large>Button</Button>
 </Block>
 
