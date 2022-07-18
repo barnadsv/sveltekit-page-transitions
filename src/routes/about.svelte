@@ -5,6 +5,7 @@
   $navbarStore = 'About'
 </script>
 
+<main>
 <Block>
 <h1>About</h1>
 <p>
@@ -17,13 +18,10 @@
   commodo anim. Sit ea sint incididunt dolor ut nisi consectetur officia ea.
 </p>
 </Block>
+</main>
 
-<style lang="postcss">
-  body p {
-    color: black;
+<!-- <style lang="postcss">
+  main {
+    min-height: 800px;
   }
-
-  body.dark-mode p {
-    color: white;
-  }
-</style>
+</style> -->

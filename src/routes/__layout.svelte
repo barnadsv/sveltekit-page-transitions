@@ -17,6 +17,8 @@
   import { App } from "konsta/svelte";
   import Button from "$lib/components/Button.svelte";
   import { Page, Navbar, Toolbar, Link, Panel } from 'konsta/svelte'
+  import Footer from '$lib/components/Footer.svelte'
+  import FooterDesktop from '$lib/components/FooterDesktop.svelte'
   import { onMount } from "svelte";
 
   export let pathname;
@@ -27,8 +29,6 @@
   let leftPanelOpened = false 
   
   // TODO
-  // Transformar Navbar em um componente para ser o header e concentrar o codigo
-  // Transformar Toolbar em um componente para ser o footer e concentrar o codigo
   // Transformar Panel em um componente para ser o menu e concentrar o codigo
 
   // Detectando o dispositivo para determinar o tema (ios|material)
@@ -48,10 +48,6 @@
     htmlElement = window.document.firstElementChild
     body = window.document.body
   })
-
-  const toggleDark = () => {
-    $themeStore['dark'] = !$themeStore['dark']
-  }
 
   $: {
     // console.log('Dark: ', $themeStore['dark'])
@@ -96,16 +92,11 @@
         <PageTransition {pathname}>
           <slot />
         </PageTransition>
-        <Toolbar top="false" class="left-0 bottom-0 fixed w-full">
-          <Link toolbar><a href="/">Home</a></Link>
-          <Link toolbar><a href="/about">About</a></Link>
-          <Link toolbar onClick={toggleDark}>Toggle</Link>
-        </Toolbar>
+        <Footer />
         <Panel
           side="left"
           opened={leftPanelOpened}
-          onBackdropClick={() => (leftPanelOpened = false)}
-        >
+          onBackdropClick={() => (leftPanelOpened = false)} >
           <Page>
             <p>Left Panel</p>
           </Page>
@@ -119,16 +110,11 @@
         <PageTransition {pathname}>
           <slot />
         </PageTransition>
-        <Toolbar top="false" class="left-0 bottom-0 fixed w-full">
-          <Link toolbar><a href="/">Home</a></Link>
-          <Link toolbar><a href="/about">About</a></Link>
-          <Link toolbar onClick={toggleDark}>Toggle</Link>
-        </Toolbar>
+        <Footer />
         <Panel
           side="left"
           opened={leftPanelOpened}
-          onBackdropClick={() => (leftPanelOpened = false)}
-        >
+          onBackdropClick={() => (leftPanelOpened = false)} >
           <Page>
             <p>Left Panel</p>
           </Page>
@@ -142,10 +128,7 @@
     <slot />
   </div>
   </PageTransitionDesktop>
-  <div class="btm-nav">
-    <a class="link" href="/">Home</a>
-    <a class="link" href="/about">About</a>
-  </div>
+  <FooterDesktop />
 {/if}
 </div>
 

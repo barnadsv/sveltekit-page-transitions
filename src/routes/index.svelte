@@ -5,6 +5,7 @@
   $navbarStore = 'Home'
 </script>
   
+<main>
 <Block>
   <h1>Home</h1>
   <p>
@@ -20,4 +21,11 @@
   </List>
   <Button large>Button</Button>
 </Block>
+</main>
+
+<!-- <style lang="postcss">
+  main {
+    min-height: 800px;
+  }
+</style> -->
 
