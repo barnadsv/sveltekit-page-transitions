@@ -12,7 +12,7 @@
   import PageTransitionDesktop from '$lib/components/PageTransitionDesktop.svelte'
   import { themeStore } from "$lib/stores/theme";
   import { navbarStore } from "$lib/stores/navbar"
-  import { ua } from '$lib/stores/ua/store'
+  import { deviceStore } from '$lib/stores/device'
   import UAParser  from 'ua-parser-js'
   import { App } from "konsta/svelte";
   import Button from "$lib/components/Button.svelte";
@@ -35,14 +35,14 @@
   const parser = new UAParser()
   const device = parser.getResult()['device']
   if (device && ['tablet', 'mobile'].includes(device['type'])) {
-      $ua.device['model'] = device['model']
-      $ua.device['type'] = device['type']
-      $ua.device['vendor'] = device['vendor']
-      $ua.device['touchable'] = Object.keys(device).length > 0
+      $deviceStore['model'] = device['model']
+      $deviceStore['type'] = device['type']
+      $deviceStore['vendor'] = device['vendor']
+      $deviceStore['touchable'] = Object.keys(device).length > 0
   } else {
-      $ua.device['touchable'] = false
+      $deviceStore['touchable'] = false
   }
-  osTheme = $ua.device['model'] ? $ua.device['model'] === 'iPhone' ? "ios" : "material" : "material"
+  osTheme = $deviceStore['model'] ? $deviceStore['model'] === 'iPhone' ? "ios" : "material" : "material"  
 
   onMount(() => {
     htmlElement = window.document.firstElementChild
@@ -65,14 +65,14 @@
     // Mas provavelmente irei usar alguma ui, como daisyui, que se vale das classes e atributos em html.
     if (htmlElement) {
         if ($themeStore['dark']) {
-          if (!$ua.device['touchable']) {
+          if (!$deviceStore['touchable']) {
             body.classList.remove("light-mode");
             body.classList.add("dark-mode");
           }
           htmlElement.classList.add('dark')
           htmlElement.setAttribute("data-theme", 'dark')
         } else {
-          if (!$ua.device['touchable']) {
+          if (!$deviceStore['touchable']) {
             body.classList.remove("dark-mode");
             body.classList.add("light-mode");
           }
@@ -83,8 +83,8 @@
   }
 </script>
 
-<div bind:clientWidth={$ua.width} bind:clientHeight={$ua.height}>
-{#if $ua.device['touchable']}
+<div bind:clientWidth={$deviceStore.width} bind:clientHeight={$deviceStore.height}>
+{#if $deviceStore['touchable']}
   {#if $themeStore['dark']}
   <App theme={osTheme} dark safeAreas>
       <Page>
