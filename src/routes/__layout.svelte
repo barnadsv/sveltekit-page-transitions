@@ -9,6 +9,7 @@
 <script>
   import "../app.css";
   import PageTransition from "$lib/components/PageTransition.svelte";
+  import PageTransitionDesktop from '$lib/components/PageTransitionDesktop.svelte'
   import { themeStore } from "$lib/stores/theme";
   import { navbarStore } from "$lib/stores/navbar"
   import { ua } from '$lib/stores/ua/store'
@@ -136,8 +137,14 @@
   </App>
   {/if}
 {:else}
-  <div class="layout">
+  <PageTransitionDesktop {pathname}>
+    <div class="layout">
     <slot />
+  </div>
+  </PageTransitionDesktop>
+  <div class="btm-nav">
+    <a class="link" href="/">Home</a>
+    <a class="link" href="/about">About</a>
   </div>
 {/if}
 </div>
