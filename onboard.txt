@@ -1,0 +1,94 @@
+ Etapas do Cadastro
+  - Dados Básicos
+  - Informações Pessoais
+  - Endereço
+  - Informações Financeiras
+  - Documentos e Informações Legais
+ 
+ 1. Antes de começar, por favor leia e aceite nossos Termos:
+ - Dados Básicos (Cadastro)
+ 2. Qual é o seu primeiro nome?
+ 
+ 4. <Primeiro nome>, quando você nasceu?
+ 5. Qual é o seu e-mail?
+ 6. Você recebeu um código de validação no e-mail <e-mail>. Fique atento! Ele pode ter ido para o spam. (Alterar e-mail)
+    Olá, <Primeiro nome>. Digite o código de confirmação em seu aplicativo. Este código é válido por 10 minutos.
+ 7. Qual é o número do seu celular -> Código de validação?
+ - Informações Pessoais
+
+ 8. <Primeiro nome>, seu gênero é:
+    Feminino
+    Masculino
+    Outro
+ 9. Qual é o nome da sua mãe?
+10. Em qual país você nasceu?
+11. Em qual estado você nasceu?
+12. Já sabemos que é <brasiliense, paulista, carioca, goiano, etc.>, agora nos conte em qual cidade você nasceu:
+13. <Primeiro nome>, informe seu estado civil:
+    Solteiro
+    Casado
+    Divorciado
+    Viúvo
+    União Estável
+
+- Endereço
+14. <Primeiro nome>, qual é o CEP da sua residência?
+15. Confirme o seu endereço residencial:
+    CEP
+    Endereço
+    Número
+    Complemento
+    Bairro
+    Estado 
+    Cidade
+
+ - Informações Financeiras
+ 3. Informe seu CPF:
+16. Qual é a sua profissão?
+17. Qual é sua renda mensal?
+    De R$ 0 a R$ 2.500,00
+    De R$ 2.500,01 a R$ 5.000,00
+    De R$ 5.000,01 a R$ 7.500,00
+    De R$ 7.500,01 a R$ 10.000,00
+    De R$ 10.000,01 a R$ 15.000,00
+    Acima de R$ 15.000,00
+18. Qual é o seu patrimônio?
+    De R$ 26 mil a R$ 50 mil
+    De R$ 51 mil a R$ 100 mil
+    De R$ 101 mil a R$ 200 mil
+    De R$ 201 mil a R$ 500 mil
+    De R$ 501 mil a R$ 1 milhão
+    De R$ 1,1 milhão a R$ 10 milhões
+    Acima de R$ 10 milhões
+19. <Primeiro nome>, precisamos que você fotografe um documento seu: (CNH, RG)
+    Fique atento às dicas para tirar uma boa foto:
+     - Retire o documento do plástico
+     - Enxaixe o documento no modelo indicado
+     - Tire uma foto em um local bem iluminado
+     - As informações precisam estar legíveis
+     RG - Frente / RG - Verso
+     C.N.H.
+     As informações estão legíveis? (Tentar novamente)
+     
+     A foto da CNH foi enviada, precisamos que você confirme as informações do documento:
+      - Nome completo na CNH
+      - Número de registro da CNH
+      - Data de emissão da CNH
+      - Sua CNH foi emitida no Detran de qual estado?
+20. Agora, para sua segurança, precisamos que você tire uma selfie:
+    Fique atento às dicas para tirar uma boa selfie:
+     - A foto deve ser tirada de Frente
+     - O rosto deve estar centralizado
+     - Não sorria ou faça caretas
+     - Não use óculos, chapéus, boné ou máscara
+     - Posicione a câmera na altura dos olhos
+     O rosto está bem no centro? (Tentar novamente)
+21. Você é uma Pessoa Exposta Politicamente? 
+    Quem é a Pessoa Exposta Politicamente?
+     - Eu mesmo
+     - É alguém da família
+     - É um amigo
+     Pessoa Exposta Politicamente é aquela que, nos últimos 5 anos, exerceu algum mandato eletivo ou teve cargo nos poderes legislativo e executivo, assim como seus familiares ou pessoas com relacionamento próximo.
+ - Confirmação dos Dados
+ 22. Precisamos que você confirme os dados informados para conclusão de seu Cadastro
+       

@@ -10,6 +10,7 @@
   import "../app.css";
   import PageTransition from "$lib/components/PageTransition.svelte";
   import PageTransitionDesktop from '$lib/components/PageTransitionDesktop.svelte'
+  import { fade } from "svelte/transition";
   import { themeStore } from "$lib/stores/theme";
   import { navbarStore } from "$lib/stores/navbar"
   import { deviceStore } from '$lib/stores/device'
